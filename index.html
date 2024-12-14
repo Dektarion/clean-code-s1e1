@@ -14,76 +14,83 @@
 
 <body class="body">
 
-  <header>
-    <div class="header">
+  <header class="header">
+    <div class="header__container">
       <img
-        class="header-image"
+        class="header__img"
         src="./eisenhower-matrix.jpg"
         alt="eisenhower-matrix">
       <a
-        class="information"
+        class="header__link"
         href="https://goal-life.com/page/method/matrix-eisenhower">
         Want more details?
       </a>
     </div>
   </header>
 
-  <main>
-    <div class="main">
-      <div id="topSectionForAddingElementToList">
-        <h3
-          class="title"
-          for="new-task">
+  <main class="main">
+
+    <div class="main__container">
+
+      <div class="main__add-item add-item">
+        <h3 class="add-item__title">
             Add Item
         </h3>
-        <div class="row">
-          <input
-            id="new-task"
-            class="task input-task">
-          <button class="btn">Add</button>
+        <div class="add-item__container">
+          <input class="add-item__input add-item__input_grow">
+          <button class="add-item__btn">Add</button>
         </div>
       </div>
-      <h3 class="title">
-        Todo
-      </h3>
-      <ul
-        class="list-wrapper"
-        id="incompleteTasks">
-        <li class="list">
-          <input type="checkbox" class="input-checkbox">
-          <label class="task label">Pay Bills</label>
-          <input class="task input-task">
-          <button class="btn edit">Edit</button>
-          <button class="btn delete"><img class="img" src="./remove.svg" alt="remove-icon"></button>
-        </li>
-        <li class="change list">
-          <input type="checkbox" class="input-checkbox">
-          <label class="task label">Go Shopping</label>
-          <input
-            value="Go Shopping"
-            class="task input-task">
-          <button class="btn edit">Save</button>
-          <button class="btn delete"><img class="img" src="./remove.svg" alt="remove-icon"></button>
-        </li>
-      </ul>
-      <h3 class="title">
-        Completed
-      </h3>
-      <ul
-        class="list-wrapper"
-        id="completed-tasks">
-        <li class="list">
-          <input
-            type="checkbox"
-            class="input-checkbox"
-            checked>
-          <label class="task label">See the Doctor</label>
-          <input class="task input-task">
-          <button class="btn edit">Edit</button>
-          <button class="btn delete"><img class="img" src="./remove.svg" alt="remove-icon"></button>
-        </li>
-      </ul>
+
+      <div class="main__todo todo">
+        <h3 class="todo__title">
+          Todo
+        </h3>
+        <ul class="todo__container list list-wrapper">
+          <li class="list__container">
+            <input
+              type="checkbox"
+              class="list__input_checkbox">
+            <label class="list__label list__label_grow">Pay Bills</label>
+            <input class="list__input list__input_hidden list__input_grow">
+            <button class="list__btn list__btn_edit">Edit</button>
+            <button class="list__btn list__btn_delete"><img class="list__img" src="./remove.svg" alt="remove-icon"></button>
+          </li>
+          <li class="change list__container">
+            <input
+              type="checkbox"
+              class="list__input_checkbox">
+            <label class="list__label list__label_grow list__label_change">Go Shopping</label>
+            <input
+              value="Go Shopping"
+              class="list__input list__input_hidden list__input_change list__input_grow">
+            <button class="list__btn list__btn_edit">Save</button>
+            <button class="list__btn list__btn_delete"><img class="list__img" src="./remove.svg" alt="remove-icon"></button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="main__compl compl">
+        <h3 class="compl__title">
+          Completed
+        </h3>
+        <ul class="compl__container list list-wrapper">
+          <li class="list__container">
+            <input
+              type="checkbox"
+              class="list__input_checkbox"
+              checked>
+            <label class="list__label list__label_grow list_label_compl">See the Doctor</label>
+            <input class="list__input list__input_hidden list__input_grow">
+            <button class="list__btn list__btn_edit">Edit</button>
+            <button class="list__btn list__btn_delete"><img class="list__img" src="./remove.svg" alt="remove-icon"></button>
+          </li>
+        </ul>
+      </div>
+
+
     </div>
+
   </main>
 
   <script src="app.js"></script>
